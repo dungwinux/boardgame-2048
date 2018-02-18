@@ -86,9 +86,11 @@ export default class game extends React.Component<{}, gameState> {
 					}} >Invalid Move</h3> :
 					null
 			}
+
 			<button onClick={() => location.reload()}>
 				Restart game
 			</button>
+			
 			<div style={{ marginBottom: '50px' }}>
 				<span style={{ float: 'left' }}>Moves: {game.turn - 1}&nbsp;</span>
 				<span style={{ float: 'left' }}>&nbsp;Score: {game.score}</span>

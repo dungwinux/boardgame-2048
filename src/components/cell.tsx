@@ -34,8 +34,8 @@ export default class Cell extends React.Component<CellProps> {
 		const cell = this.props.cell;
 		if (cell === null) {
 			return <td style={{
-				width: '25%',
-				fontSize: '24px',
+				width: '20%',
+				fontSize: '30px',
 				textAlign: 'center',
 				verticalAlign: 'middle',
 				border: 'solid'
@@ -45,8 +45,8 @@ export default class Cell extends React.Component<CellProps> {
 		const [bg, text] = color(cell.value);
 		// We simply render a <td> that holds a cute number.
 		return <td style={{
-			width: '25%',
-			fontSize: isNew ? '30px' : '24px',
+			width: '20%',
+			fontSize: isNew ? '36px' : '30px',
 			textAlign: 'center',
 			verticalAlign: 'middle',
 			border: 'solid',
