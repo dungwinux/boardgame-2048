@@ -1,0 +1,29 @@
+{
+  "name": "boardgame-2048",
+  "version": "1.0.0",
+  "description": "Simple animation-less 2048 boardgame.",
+  "main": "index.js",
+  "author": "Nguyen Pham Cao <natsukagami@gmail.com>",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "tsc": "tsc",
+    "build": "webpack",
+    "dev": "webpack-dev-server"
+  },
+  "dependencies": {
+    "@types/react": "^16.0.36",
+    "@types/react-dom": "^16.0.3",
+    "@types/react-key-handler": "typings-react-key-handler",
+    "awesome-typescript-loader": "^3.4.1",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "source-map-loader": "^0.2.3",
+    "typescript": "^2.7.1",
+    "webpack": "^3.10.0"
+  },
+  "devDependencies": {
+    "tslint": "^5.9.1",
+    "webpack-dev-server": "^2.11.1"
+  }
+}
