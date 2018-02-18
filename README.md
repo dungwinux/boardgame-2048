@@ -9,9 +9,11 @@ _2048 thô thiển được viết trong 1 tiếng._
 ## Build 
 ```
 npm install
+npm run dev
 ```
 
 ## Deploy local
+
 ```
 npm run dev
 ```
