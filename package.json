@@ -14,7 +14,7 @@
   "dependencies": {
     "@types/react": "^16.0.36",
     "@types/react-dom": "^16.0.3",
-    "@types/react-key-handler": "typings-react-key-handler",
+    "@types/react-key-handler": "https://github.com/natsukagami/typings-react-key-handler",
     "awesome-typescript-loader": "^3.4.1",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
