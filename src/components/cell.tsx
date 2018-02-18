@@ -13,7 +13,7 @@ function color(value: number): [string, string] {
 		// Divide 0..255 into 13 steps (0 for empty cell, 255 for 2048).
 		const yellowShade = Math.trunc(255 / 12) * value;
 		// Return the shade of yellow in term of RGB.
-		return [`rgb(0, 255, ${255 ^ yellowShade})`, `rgb(0, 0, ${yellowShade})`];
+		return [`rgb(255, 255, ${255 ^ yellowShade})`, `rgb(0, 0, ${yellowShade})`];
 	}
 	// Decrease the green shade by 2**(value - 11 + 4) - 1 because when value hits 15
 	// (its maximum value) our color will be fully red.
@@ -46,12 +46,12 @@ export default class Cell extends React.Component<CellProps> {
 		// We simply render a <td> that holds a cute number.
 		return <td style={{
 			width: '25%',
-			fontSize: isNew ? '40px' : '24px',
+			fontSize: isNew ? '30px' : '24px',
 			textAlign: 'center',
 			verticalAlign: 'middle',
 			border: 'solid',
 			backgroundColor: bg,
-			color: text
+			color: isNew ? 'rgb(245, 51, 51)' : text,
 		}}>{2 ** cell.value}</td>;
 	}
 }

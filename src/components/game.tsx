@@ -62,7 +62,7 @@ export default class game extends React.Component<{}, gameState> {
 		this.state = Object.assign({}, g.state, {
 			validMove: true
 		});
-		// this.handler
+		this.handler = this.handleKeypress.bind(this);
 	}
 	render() {
 		const game = this.state;
@@ -74,9 +74,9 @@ export default class game extends React.Component<{}, gameState> {
 		}}>
 			{
 				g.lost() ?
-					<h1 style={{
+					<h3 style={{
 						textAlign: 'center'
-					}} >You Lost</h1> :
+					}} >You Lost</h3> :
 					null
 			}
 			{
@@ -85,15 +85,17 @@ export default class game extends React.Component<{}, gameState> {
 						textAlign: 'center'
 					}} >Invalid Move</h3> :
 					null
-			}
-			<button onClick={() => alert('click')}>
+			}	
+			<button onClick={() => this.handleReset()}>
 				Restart game
 			</button>
-			<div style={{ marginBottom: '20px' }}>
-				<span style={{ float: 'right' }}>Moves: {game.turn - 1}</span>
-				<span style={{ float: 'left' }}>Score: {game.score}</span>
+			<div style={{ marginBottom: '50px' }}>
+				<span style={{ float: 'left' }}>Moves: {game.turn - 1}&nbsp;</span>
+				<span style={{ float: 'left' }}>&nbsp;Score: {game.score}</span>
 			</div>
+			
 			<Board state={game} size="calc(90vh - 20px)" margin="calc((60vw - 90vh + 20px) / 2)" />
+			
 		</div>;
 	}
 } 
