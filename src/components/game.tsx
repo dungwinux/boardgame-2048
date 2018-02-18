@@ -56,14 +56,14 @@ export default class game extends React.Component<{}, gameState> {
 			document.removeEventListener("keydown", this.handler);
 		}
 	}
-	handleReset() {
-		const g = new Game();
-		g.spawn();
-		this.state = Object.assign({}, g.state, {
-			validMove: true
-		});
-		this.handler = this.handleKeypress.bind(this);
-	}
+	// handleReset() {
+	// 	const g = new Game();
+	// 	g.spawn();
+	// 	this.state = Object.assign({}, g.state, {
+	// 		validMove: true
+	// 	});
+	// 	this.handler = this.handleKeypress.bind(this);
+	// }
 	render() {
 		const game = this.state;
 		const g = new Game(game);
@@ -85,8 +85,8 @@ export default class game extends React.Component<{}, gameState> {
 						textAlign: 'center'
 					}} >Invalid Move</h3> :
 					null
-			}	
-			<button onClick={() => this.handleReset()}>
+			}
+			<button onClick={() => location.reload()}>
 				Restart game
 			</button>
 			<div style={{ marginBottom: '50px' }}>
