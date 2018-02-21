@@ -2,14 +2,14 @@
 
 _2048 thô thiển được viết trong 1 tiếng._
 
-2048 written in Typscript. Original repository by @natsukagami.
+2048 written in Typescript. Original repository by @natsukagami.
 
 ---
 
 ## Build 
 ```
 npm install
-npm run dev
+npm run build
 ```
 
 ## Deploy local
